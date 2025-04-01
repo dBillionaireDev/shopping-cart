@@ -1,0 +1,156 @@
+.cart-img {
+  width: 415px;
+  border-radius: 10px;
+  border-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+body {
+  background-color: hsl(20, 50%, 98%);
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  list-style-type: none;
+}
+.product-cart {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  gap: 30px;
+  margin-left: 2rem;
+}
+#cart {
+  display: flex;
+}
+.shopping-cart {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+.header {
+  margin-left: 75px;
+}
+#order {
+  position: relative;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 20%;
+  height: fit-content;
+  background-color: #fff;
+}
+#content {
+  display: block;
+  padding-bottom: 40px;
+  text-align: center;
+  font-weight: 900;
+  color: hsl(7, 20%, 60%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+grid .des {
+  position: relative;
+  top: -30px;
+}
+
+.cart-item {
+  background-color: hsl(20, 50%, 98%);
+  padding-bottom: 5px;
+}
+.state {
+  visibility: hidden;
+}
+
+.submit-btn {
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 30px;
+  padding: 15px 28px;
+  position: relative;
+  top: -25px;
+  left: 125px;
+  z-index: +1;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid hsl(14, 25%, 72%);
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .product-cart {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .cart-img {
+    width: 325px;
+    height: 240px;
+  }
+  .shopping-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header {
+    margin-left: 15px;
+  }
+  #order {
+    margin: 0 auto;
+    width: 85%;
+    text-align: center;
+  }
+  .submit-btn {
+    position: relative;
+    left: 80px;
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  .product-cart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .header {
+    margin-left: 15px;
+  }
+  .cart-img {
+    width: 250px;
+    height: 250px;
+  }
+  #order {
+    width: 100%;
+  }
+  .submit-btn {
+    position: relative;
+    left: 45px;
+  }
+  #h1 {
+    text-align: center;
+  }
+  .shopping-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
