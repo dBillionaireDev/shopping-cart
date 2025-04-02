@@ -61,7 +61,7 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-grid .des {
+.des {
   position: relative;
   top: -30px;
 }
@@ -71,9 +71,51 @@ grid .des {
   padding-bottom: 5px;
 }
 .state {
-  visibility: hidden;
+  background-color: hsl(14, 86%, 42%);
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px 47px;
+  position: relative;
+  top: -25px;
+  left: 125px;
+  z-index: +1;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid hsl(14, 25%, 72%);
 }
 
+.quantity--cart--add:hover,
+.quantity--cart--dec:hover {
+  cursor: pointer;
+}
+.quantity--cart--add:active,
+.quantity--cart--dec:active {
+  background-color: #fff;
+  color: hsl(14, 86%, 42%);
+  cursor: pointer;
+}
+.quantity--cart--dec {
+  border: 1px solid white;
+  background-color: hsl(14, 86%, 42%);
+  border-radius: 50px;
+  padding: 2.5px 5px;
+  position: relative;
+  left: -35px;
+  margin: 0;
+}
+.quantity--cart--add {
+  border: 1px solid white;
+  background-color: hsl(14, 86%, 42%);
+  border-radius: 50px;
+  padding: 3px 5px;
+  position: relative;
+  left: 35px;
+  margin: 0;
+}
 .submit-btn {
   background-color: hsl(20, 50%, 98%);
   border-radius: 30px;
@@ -89,6 +131,11 @@ grid .des {
   align-items: center;
   justify-content: center;
   border: 2px solid hsl(14, 25%, 72%);
+}
+
+.submit-btn:hover {
+  color: hsl(14, 25%, 72%);
+  cursor: pointer;
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
@@ -116,7 +163,8 @@ grid .des {
     width: 85%;
     text-align: center;
   }
-  .submit-btn {
+  .submit-btn,
+  .state {
     position: relative;
     left: 80px;
   }
@@ -141,7 +189,8 @@ grid .des {
   #order {
     width: 100%;
   }
-  .submit-btn {
+  .submit-btn,
+  .state {
     position: relative;
     left: 45px;
   }
