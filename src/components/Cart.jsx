@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import data from '/home/nexy/React-Projects/Product-Cart-FM/src/data.json';
+import data from '../data.json';
 import cartImg from '../assets/images/icon-add-to-cart.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 import incrementIcon from '../assets/images/icon-increment-quantity.svg';
