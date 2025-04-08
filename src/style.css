@@ -105,7 +105,7 @@ button:hover{
   padding: 8px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .state {
   background-color: hsl(14, 86%, 42%);
@@ -124,11 +124,11 @@ button:hover{
   justify-content: center;
   border: 2px solid hsl(14, 25%, 72%);
 }
-#confirm-order {
+.confirm-order {
   background-color: hsl(14, 86%, 42%);
   color: #fff;
   border-radius: 30px;
-  padding: 12px;
+  padding: 15px;
   font-weight: 700;
   margin: 15px 0 10px;
 }
@@ -176,7 +176,6 @@ button:hover{
   justify-content: center;
   border: 2px solid hsl(14, 25%, 72%);
 }
-
 .remove-btn {
   background-color: #ff4444;
   color: white;
@@ -194,10 +193,96 @@ button:hover{
   justify-content: center;
   border: 2px solid #cc0000;
 }
-
 .submit-btn:hover {
   color: hsl(14, 25%, 72%);
   cursor: pointer;
+}
+.remove-btn:hover {
+  background-color: #cc0000;
+  cursor: pointer;
+}
+.cart-item-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+.cart-item-details {
+  flex-grow: 1;
+}
+.cart-item-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: hsl(14, 86%, 42%);
+}
+.subtotal {
+  font-weight: bold;
+  color: hsl(14, 65%, 38%);
+}
+.grand-total {
+  text-align: right;
+  margin-top: 1rem;
+  color: hsl(14, 86%, 42%);
+}
+.confirmedOrderContainer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: +1;
+  top: 150px;
+  left: 500px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 500px;
+}
+.cartedItems{
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid red;
+}
+
+.start-new-order{
+  background-color: hsl(14, 86%, 42%);
+  color: #fff;
+  border-radius: 30px;
+  padding: 18px;
+  font-weight: 700;
+  font-size: 14pt;
+  margin: 15px 0 10px;
+}
+#item-checkout{
+  display: flex;
+  justify-content: space-between;
+  margin: -20px 0;
+  padding-top: 10px;
+  width: 100px;
+}
+.order--confirmed{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 1rem;
+}
+#total-item-worth{
+  font-size: 12pt;
+  position: relative;
+  left: 435px;
+  top: -10px;
+  display: flex;
+  flex-direction: flex-end;
+  text-align: right;
+  width: fit-content;
+}
+#confirmed--heading{
+  margin-bottom: 25px;
 }
 
 .remove-btn:hover {

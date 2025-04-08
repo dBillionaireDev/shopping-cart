@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Cart from "./components/Cart"
 import Order from "./components/Order"
 import Footer from "./components/Footer"
+import ConfirmedOrder from "./components/ConfirmedOrder"
 import "./style.css"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Cart cartItems={cartItems} setCartItems={setCartItems} removeFromCart={removeFromCart} />
         <Order cartItems={cartItems} removeFromCart={removeFromCart} />
       </span>
+      <ConfirmedOrder cartItems={cartItems} />
       <Footer />
     </>
   )

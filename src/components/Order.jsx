@@ -38,9 +38,9 @@ const Order = ({ cartItems, removeFromCart }) => {
             </span>
           </div>
           <div className="delivery">
-            <img src={carbonNeutral} alt='carbon-neutral-icon' /> <p> This is a <strong> carbon-neutral </strong> delivery</p>
+            <img src={carbonNeutral} alt='carbon-neutral-icon' /> <small> This is a <strong> carbon-neutral </strong> delivery</small>
           </div>
-          <button id='confirm-order'>Confirm Order</button>
+          <button className='confirm-order'>Confirm Order</button>
         </section>
       )}
     </div>
