@@ -58,6 +58,7 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
   return (
     <div id="cart">
       <ul className="product-cart">
+        <img src={../assets/images/image-waffle-desktop.jpg} alt="error" />
         {data.map((item) => (
           <section className="cart-item" key={item.id}>
             <li>
@@ -69,7 +70,6 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
                   border: activeItems[item.id] ? '3px solid hsl(14, 86%, 42%)' : 'none'
                 }}
               />
-              <img src={../assets/images/image-waffle-desktop.jpg} alt="error" />
             </li>
             <span className='des'>
               <li style={{ color: 'hsl(12, 20%, 44%)' }}>{item.category}</li>
