@@ -226,29 +226,70 @@ button:hover{
   margin-top: 1rem;
   color: hsl(14, 86%, 42%);
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  pointer-events: all;
+}
+.start-new-order:hover{
+  cursor: pointer;
+}
 .confirmedOrderContainer{
+  visibility: visible;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  z-index: +1;
-  top: 150px;
-  left: 500px;
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 auto;
   padding: 30px 40px;
   background-color: #fff;
   border-radius: 10px;
   width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  /* max-height: 80vh; */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  cursor: pointer;
+  pointer-events: all;
 }
-.cartedItems{
+body.show-confirmed {
+  pointer-events: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.cartedItems {
   display: flex;
   flex-direction: column;
   background-color: hsl(20, 50%, 98%);
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
   margin: 15px 0;
-  border: 1px solid red;
+  gap: 15px;
 }
-
+.order--confirmed {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  gap: 15px;
+  position: relative;
+  left: 30px;
+}
+.cartedItems img {
+  border: 1px solid hsl(13, 31%, 94%);
+  flex-shrink: 0;
+}
 .start-new-order{
   background-color: hsl(14, 86%, 42%);
   color: #fff;
@@ -264,17 +305,20 @@ button:hover{
   margin: -20px 0;
   padding-top: 10px;
   width: 100px;
+  gap: 5px;
 }
-.order--confirmed{
+#order-confirmed{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-left: 1rem;
+  position: relative;
+  justify-content: space-between;
+  top: 10px;
 }
+
 #total-item-worth{
   font-size: 12pt;
   position: relative;
-  left: 435px;
+  left: 400px;
   top: -10px;
   display: flex;
   flex-direction: flex-end;
@@ -284,7 +328,19 @@ button:hover{
 #confirmed--heading{
   margin-bottom: 25px;
 }
+#order-confirmed hr{
+  border: 1px solid hsl(13, 31%, 94%);
+  width: 470px;
+  position: relative;
+  left: -33px;
+  margin-left: 0;
+}
 
+#item-ordered{
+  display: flex;
+  padding: 0;
+  margin: -25px auto -25px;
+}
 @media (max-width: 480px) and (orientation: portrait) {
   .product-cart {
     width: 100%;
@@ -297,7 +353,6 @@ button:hover{
   }
   .cart-img {
     width: 325px;
-    /* max-width: 375px; */
     height: 240px;
   }
   .shopping-cart {
@@ -316,6 +371,47 @@ button:hover{
   #clear-cart {
     position: relative;
     left: 130px;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .confirmedOrderContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 30px 40px;
+    width: 300px;
+  }
+
+  .cartedItems{
+    padding: 10px 5px;
+  }
+
+  #total-item-worth{
+    left: 250px;
+  }
+
+  hr{
+    width: 300px;
+  }
+
+  #order-confirmed hr{
+    width: 280px;
+    left: -15px;
+  }
+
+  .order--confirmed {
+    left: 20px;
+  }
+  #item--checkout{
+    margin-left: -15px;
   }
 }
 
@@ -336,8 +432,10 @@ button:hover{
     height: 250px;
   }
   #order {
-    width: 100%;
+    width: 270px;
+    margin: 0 auto;
   }
+
   #h1 {
     text-align: center;
   }

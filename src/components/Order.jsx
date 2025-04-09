@@ -3,7 +3,7 @@ import cartEmpty from '../assets/images/illustration-empty-cart.svg'
 import clearCart from '../assets/images/icon-remove-item.svg'
 import carbonNeutral from '../assets/images/icon-carbon-neutral.svg'
 
-const Order = ({ cartItems, removeFromCart }) => {
+const Order = ({ cartItems, removeFromCart, confirmOrder }) => {
 
   return (
     <div id="order">
@@ -40,7 +40,9 @@ const Order = ({ cartItems, removeFromCart }) => {
           <div className="delivery">
             <img src={carbonNeutral} alt='carbon-neutral-icon' /> <small> This is a <strong> carbon-neutral </strong> delivery</small>
           </div>
-          <button className='confirm-order'>Confirm Order</button>
+          <button className='confirm-order' onClick={confirmOrder}>
+            Confirm Order
+          </button>
         </section>
       )}
     </div>
