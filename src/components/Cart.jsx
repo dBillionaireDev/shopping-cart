@@ -77,6 +77,7 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
                 <strong>${item.price}</strong>
               </li>
             </span>
+
             {cartItems.some(cartItem => cartItem.id === item.id) ? (
               <span className="state">
                 <button className='quantity--cart--dec' onClick={() => reduceCart(item)}><img src={decrementIcon} alt='increase item' /></button>

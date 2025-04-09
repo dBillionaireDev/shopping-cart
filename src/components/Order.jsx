@@ -10,7 +10,7 @@ const Order = ({ cartItems, removeFromCart, confirmOrder }) => {
       {cartItems.length === 0 ? (
         <>
           <h1 style={{ color: 'hsl(14, 86%, 42%)' }}>Your Cart (0)</h1>
-          <img src={cartEmpty} alt="cart-empty" />
+          <img src={cartEmpty} alt="cart-empty" id='empty-cart' />
           <p>Your added items will appear here</p>
         </>
       ) : (
