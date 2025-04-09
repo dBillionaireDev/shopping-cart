@@ -69,6 +69,7 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
                   border: activeItems[item.id] ? '3px solid hsl(14, 86%, 42%)' : 'none'
                 }}
               />
+              <img src={../assets/images/image-waffle-desktop.jpg} alt="error" />
             </li>
             <span className='des'>
               <li style={{ color: 'hsl(12, 20%, 44%)' }}>{item.category}</li>
