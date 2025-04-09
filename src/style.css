@@ -256,8 +256,8 @@ button:hover{
   width: 500px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  /* max-height: 80vh; */
-  overflow-y: auto;
+  max-height: 80vh;
+  overflow: auto;
   scroll-behavior: smooth;
   cursor: pointer;
   pointer-events: all;
