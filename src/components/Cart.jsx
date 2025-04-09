@@ -3,7 +3,6 @@ import data from '../data.json';
 import cartImg from '../assets/images/icon-add-to-cart.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 import incrementIcon from '../assets/images/icon-increment-quantity.svg';
-import previewOnly from '../assets/images/image-waffle-desktop.jpg';
 
 const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
   const addToCart = (item) => {
@@ -59,7 +58,7 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
   return (
     <div id="cart">
       <ul className="product-cart">
-        <img src={previewOnly} alt="error" />
+        
         {data.map((item) => (
           <section className="cart-item" key={item.id}>
             <li>
