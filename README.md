@@ -32,7 +32,6 @@ Users should be able to:
 
 ### Screenshot
 
-![]([Uploading Desktop-preview.png…]()
 ![Desktop-preview](https://github.com/user-attachments/assets/1d16d27a-dcfc-4d62-be5a-a45d6efd3d53)
 
 
