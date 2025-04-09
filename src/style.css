@@ -336,10 +336,45 @@ body.show-confirmed {
   margin-left: 0;
 }
 
+
 #item-ordered{
   display: flex;
   padding: 0;
   margin: -25px auto -25px;
+
+.remove-btn:hover {
+  background-color: #cc0000;
+  cursor: pointer;
+}
+.cart-item-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: hsl(14, 86%, 42%);
+}
+
+.subtotal {
+  font-weight: bold;
+  color: hsl(14, 65%, 38%);
+}
+
+.grand-total {
+  text-align: right;
+  margin-top: 1rem;
+  color: hsl(14, 86%, 42%);
+
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .product-cart {
