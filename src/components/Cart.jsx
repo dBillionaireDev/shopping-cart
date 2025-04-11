@@ -58,6 +58,7 @@ const Cart = ({ cartItems, setCartItems, removeFromCart }) => {
   return (
     <div id="cart">
       <ul className="product-cart">
+
         {data.map((item) => (
           <section className="cart-item" key={item.id}>
             <li>
