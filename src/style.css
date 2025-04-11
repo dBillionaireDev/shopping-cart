@@ -235,7 +235,7 @@ button:hover{
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(4px);
   z-index: 10;
-  pointer-events: all;
+  pointer-events: none;
 }
 .start-new-order:hover{
   cursor: pointer;
